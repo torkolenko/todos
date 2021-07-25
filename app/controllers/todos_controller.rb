@@ -3,7 +3,7 @@ class TodosController < ApplicationController
   # POST /todos
   def create
 
-    if params[:title] = "Новая категория"
+    if params[:title] = "Создать категорию"
       
       project = Project.create( title: params[:new_title] )
 
