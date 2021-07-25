@@ -1,4 +1,5 @@
 class TodosController < ApplicationController
+  skip_before_action :verify_authenticity_token
   # POST /todos
   def create
 
@@ -24,8 +25,6 @@ class TodosController < ApplicationController
     todo = Todo.find(params[:todo_id])
 
     todo.update(isCompleted: !todo.isCompleted)
-    
-    redirect_to projects_path
     
   end
 
