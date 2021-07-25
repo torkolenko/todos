@@ -14,8 +14,6 @@ class TodosController < ApplicationController
     end
     
     Todo.create( text: params[:text], isCompleted: false, project_id: project.id )
-    
-    redirect_to projects_path
 
   end
 
