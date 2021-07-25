@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :projects, controller: 'projects' do
-    resources :todo, controller: 'todos'
-  end
+  get '/projects', to: 'projects#index'
+  post '/todos', to: 'todos#create'
+  patch '/projects/:id/todo/:id', to: 'todos#update'
 end
