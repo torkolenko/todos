@@ -20,7 +20,7 @@ module Todos
         )
       end
     end
-    config.hosts << "localhost"
+    config.hosts << "stormy-everglades-03198.herokuapp.com"
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
