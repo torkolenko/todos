@@ -3,7 +3,7 @@ class TodosController < ApplicationController
   # POST /todos
   def create
 
-    if params[:title] = "create"
+    if params[:title] == "create"
       
       project = Project.create( title: params[:new_title] )
 
@@ -13,8 +13,8 @@ class TodosController < ApplicationController
 
     end
     
-    Todo.create( text: params[:text], isCompleted: false, project_id: project.id )
-
+    todo = Todo.create( text: params[:text], isCompleted: false, project_id: project.id )
+    
   end
 
   # PATCH /projects/project_id/todo/todo_id
@@ -25,5 +25,4 @@ class TodosController < ApplicationController
     todo.update(isCompleted: !todo.isCompleted)
     
   end
-
 end
